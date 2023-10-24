@@ -26,7 +26,7 @@ const Students = () => {
       attendance: event.target.attendance.value,
       marks: event.target.marks.value,
       class: event.target.class.value,
-      School: event.target.school.value,
+      // School: event.target.school.value,
     };
     // console.log(data);
     dipatcher(addStudentsToDb(data));
@@ -80,10 +80,10 @@ const Students = () => {
     const newStudent = { ...editData, class: event.target.value };
     setEditData(newStudent);
   }
-  function editSchool(event) {
-    const newStudent = { ...editData, School: event.target.value };
-    setEditData(newStudent);
-  }
+  // function editSchool(event) {
+  //   const newStudent = { ...editData, School: event.target.value };
+  //   setEditData(newStudent);
+  // }
   return (
     <>
       {" "}
@@ -149,13 +149,13 @@ const Students = () => {
             id="class"
             type="number"
           ></input>
-          <label>Enter School</label>
+          {/* <label>Enter School</label>
           <input
             className="border-2 border-gray-400"
             required
             id="school"
             type="string"
-          ></input>
+          ></input> */}
           <button
             className="border-2 p-2 bg-blue-500 border-blue-500 rounded-md"
             type="submit"
@@ -246,7 +246,7 @@ const Students = () => {
             type="number"
             value={editData.class}
           ></input>
-          <label>Enter School</label>
+          {/* <label>Enter School</label>
           <input
             className="border-2 border-gray-400"
             required
@@ -254,7 +254,7 @@ const Students = () => {
             type="string"
             value={editData.School}
             onChange={(e) => editSchool(e)}
-          ></input>
+          ></input> */}
 
           <button
             className="border-2 p-2 bg-blue-500 border-blue-500 rounded-md"

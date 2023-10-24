@@ -35,10 +35,10 @@ const TabsUi = ({ data, edit, form }) => {
           <span className="font-medium text-xl">Student Class : </span>
           {data.class}
         </p>
-        <p>
+        {/* <p>
           <span className="font-medium text-xl">Student School : </span>
           {data.School}
-        </p>
+        </p> */}
         <button
           onClick={() => dispatcher(deleteStudents(data._id))}
           className="bg-red-500 p-2 text-white rounded text-lg "

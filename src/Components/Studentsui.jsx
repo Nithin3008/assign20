@@ -32,10 +32,10 @@ const StudentsUi = ({ data }) => {
           <span className="font-medium text-xl">Student Class : </span>
           {data.class}
         </p>
-        <p>
+        {/* <p>
           <span className="font-medium text-xl">Student School : </span>
           {data.School}
-        </p>
+        </p> */}
       </li>
     </>
   );
