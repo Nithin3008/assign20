@@ -32,7 +32,7 @@ const Navigation = () => {
           Github Link
         </a>
         <a
-          href="https://replit.com/@nithinrocky30/assign19"
+          href="https://replit.com/@nithinrocky30/assign20"
           className="text-xl text-blue-500 font-bold"
         >
           Repl Link

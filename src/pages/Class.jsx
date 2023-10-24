@@ -11,6 +11,7 @@ const Class = () => {
   const studentsSchools = studentsList?.students.map((val) => val.class);
   const schoolsList = new Set(studentsSchools);
   const [schoolFilter, setSchoolFilter] = useState("None");
+  const [genderFilter, setGender] = useState("None");
   const schoolListData = useSelector((state) => state.schoolClass);
   const [applyFilters, setFilters] = useState("");
   console.log(schoolListData);
@@ -46,11 +47,16 @@ const Class = () => {
 
   // Later in your code...
   const sortingFunction = getSortingFunction(applyFilters);
-  const showData =
+  let showData =
     applyFilters === "None"
       ? schoolListData?.class
       : schoolListData?.class.slice().sort(sortingFunction);
-
+  showData =
+    genderFilter === "None"
+      ? showData
+      : showData.filter(
+          (val) => val.gender.toLowerCase() === genderFilter.toLowerCase()
+        );
   console.log(showData);
   return (
     <div className="text-center mt-3">
@@ -68,6 +74,12 @@ const Class = () => {
           <option>marks</option>
           <option>attendance</option>
           <option>age</option>
+        </select>
+        <p>Gender Filter</p>
+        <select onChange={(e) => setGender(e.target.value)}>
+          <option>None</option>
+          <option>Male</option>
+          <option>Female</option>
         </select>
       </div>
       <ul>
