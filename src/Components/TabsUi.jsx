@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from "react-redux";
 import { deleteStudents } from "../Redux/studentSlice";
+import { useNavigate } from "react-router";
 const TabsUi = ({ data, edit, form }) => {
   const dispatcher = useDispatch();
-
+  const nav = useNavigate();
   return (
     <>
       <li className="border-4 list-none w-2/4 m-auto space-y-2 p-2 my-2">
@@ -53,6 +54,12 @@ const TabsUi = ({ data, edit, form }) => {
           }}
         >
           Edit
+        </button>
+        <button
+          className="bg-red-500 p-2 text-white rounded text-lg ml-2"
+          onClick={() => nav(`/Students/${data._id}`)}
+        >
+          View
         </button>
       </li>
     </>

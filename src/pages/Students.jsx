@@ -280,7 +280,14 @@ const Students = () => {
           ></TabsUi>
         ))}
       </ul>
-      <button onClick={() => setDisplay((s) => !s)}>Add Item</button>
+      <div className="text-center">
+        <button
+          className="bg-blue-500 p-2 text-white rounded text-lg mt-2"
+          onClick={() => setDisplay((s) => !s)}
+        >
+          Add Item
+        </button>
+      </div>
     </>
   );
 };
