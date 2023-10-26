@@ -160,13 +160,13 @@ const Teachers = () => {
           >
             Submit
           </button>
-          <button
-            className="border-2 p-2 bg-red-500 border-red-500 rounded-md"
-            onClick={() => setDisplay1(!displayForm1)}
-          >
-            Cancel
-          </button>
         </form>
+        <button
+          className="border-2 p-2 bg-red-500 border-red-500 rounded-md"
+          onClick={() => setDisplay1(!displayForm1)}
+        >
+          Cancel
+        </button>
       </div>
       <ul>
         {teacherList?.teachers.map((val) => (
